@@ -8,4 +8,25 @@ router.get("/", async function(req, res , next){
   res.json(autores.rows);
 });
 
+router.get("/inserir", async function(req, res , next){
+  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998"}
+  const autores = await Autor.inserir();
+  res.json(autores.rows);
+});
+
+router.get("/atualizar", async function(req, res , next){
+  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998", id:""}
+  const autores = await Autor.atualizar();
+  res.json(autores.rows);
+});
+
+router.get("/deletar", async function(req, res , next){
+  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998"}
+  const autores = await Autor.deletar();
+  res.json(autores.rows);
+});
+
+
+
+
 module.exports = router;
