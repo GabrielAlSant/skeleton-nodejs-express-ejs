@@ -9,23 +9,35 @@ router.get("/", async function(req, res , next){
 });
 
 router.get("/inserir", async function(req, res , next){
-  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998"}
-  const autores = await Autor.inserir();
+  const autor = {
+    nome: "Hazakih",
+    sobrenome:"Yamaki",
+    datanascimento:"12/12/1998"
+  }
+  const autores = await Autor.inserir(autor);
   res.json(autores.rows);
 });
 
 router.get("/atualizar", async function(req, res , next){
-  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998", id:""}
-  const autores = await Autor.atualizar();
+  const autor = {
+     nome: "Hazakih",
+    sobrenome:"Yamaki",
+    datanascimento:"12/12/1998",
+    id:""
+  }
+  const autores = await Autor.atualizar(autor);
   res.json(autores.rows);
 });
 
 router.get("/deletar", async function(req, res , next){
-  const autor = {nome: "Hazakih", sobrenome:"Yamaki",datanascimento:"12/12/1998"}
-  const autores = await Autor.deletar();
+  const autor = {
+     nome: "Hazakih",
+    sobrenome:"Yamaki",
+    datanascimento:"12/12/1998"
+  }
+  const autores = await Autor.deletar(autor);
   res.json(autores.rows);
 });
-
 
 
 
