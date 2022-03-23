@@ -1,4 +1,4 @@
-let connect = function(){
+ let connect = function(){
 if(global.connection){
   return global.connection.connect();
 }
