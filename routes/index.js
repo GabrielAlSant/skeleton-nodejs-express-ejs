@@ -14,15 +14,11 @@ router.post("/inserir", async function(req, res , next){
   res.json(autores.rows);
 });
 
-router.get("/atualizar", async function(req, res , next){
-  const autor = {
-     nome: "",
-    sobrenome:"",
-    datanascimento:"",
-    id:""
-  }
-  const autores = await Autor.atualizar(autor);
+router.put("/atualizar", async function(req, res , next){
+ 
+  const autores = await Autor.atualizar(req.body);
   res.json(autores.rows);
+  
 });
 
 router.get("/deletar", async function(req, res , next){
