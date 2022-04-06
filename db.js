@@ -4,7 +4,7 @@ if(global.connection){
 }
   const { Pool } = require("pg");
   const pool = new Pool({
-    connectionString:"postgres://zhmyoxyk:zWO6MyI2KzlfmKf90QwD1UobnhXtTQGt@kesavan.db.elephantsql.com/zhmyoxyk"
+    connectionString:"postgres://iduutfjv:luCIRBGPCFYD8ZK7Lgy9CBjxz11uY6V9@tuffi.db.elephantsql.com/iduutfjv"
   });
 
   global.connection = pool 
