@@ -52,7 +52,7 @@ router.delete("/deletarlivro", async function(req, res , next){
 
 router.post("/autor", async function(req, res , next){
   
-  const autores = await Autor.autor(req.body);
+  const autores = await Livro.autor(req.body);
   res.json(autores.rows);
 });
 
